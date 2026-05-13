@@ -1,4 +1,4 @@
-﻿namespace PPOppgave1
+﻿namespace StringToolkit
 {
     class Program
     {
