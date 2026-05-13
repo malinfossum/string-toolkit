@@ -1,36 +1,77 @@
-namespace StringToolkit;
-
-class Program
+﻿namespace PPOppgave1
 {
-    static void Main(string[] args)
+    class Program
     {
-        //Console.Write("Enter a string: ");
-        //string input = Console.ReadLine();
+        static void Main(string[] args)
+        {
 
-        //Console.WriteLine("Reverse (1) - Uppercase (2) - Lowercase (3)");
-        //input = Console.ReadLine();
+            bool playAgain = true;
+            string input;
+            string choice;
+
+            while (playAgain)
+            {
+
+                input = "";
+                choice = "";
 
 
-        //switch (input)
-        //{
-        //    case 1:
-        //        string reversed = "";
-        //                for (int i = input.Length - 1; i >= 0; i--)
-        //                {
-        //                    reversed += input[i];
-        //                }
-        //        break;
+                while (input == "")
+                {
 
-        //    case 2:
-        //        input = input.toUpper();
-        //        break;
+                    Console.Write("Enter a string: ");
+                    input = Console.ReadLine();
 
-        //    case 3:
-        //        input = input.toLower()
-        //        break;
-        //}
+                    Console.WriteLine("Reverse (1) - Uppercase (2) - Lowercase (3)");
+                    choice = Console.ReadLine();
 
-        
-        //Console.WriteLine(input);
+                    string result = "";
+
+                    switch (choice)
+                    {
+                        case "1":
+                            for (int i = input.Length - 1; i >= 0; i--)
+                            {
+                                result += input[i];
+                            }
+                            break;
+
+                        case "2":
+                            for (int i = 0; i < input.Length; i++)
+                            {
+                                result += char.ToUpper(input[i]);
+                            }
+                            break;
+
+                        case "3":
+                            for (int i = 0; i < input.Length; i++)
+                            {
+                                result += char.ToLower(input[i]);
+                            }
+                            break;
+                        default:
+                            result = "Invalid choice. No changes made.";
+                            break;
+                    }
+                    Console.WriteLine(result);
+                }
+                Console.Write("Do you want to play again? (Y/N): ");
+                string response = Console.ReadLine();
+                response = response.ToUpper();
+
+                if (response == "Y")
+                {
+                    playAgain = true;
+                }
+                else
+                {
+                    playAgain = false;
+                }
+            }
+            Console.WriteLine("Thanks for playing!");
+
+            Console.ReadKey();
+        }
     }
 }
+
