@@ -4,7 +4,7 @@ Pair programming exercise (Week 2 of Emne 3 at Get Academy). Console app that re
 
 ## Requirements
 
-.NET 8 SDK or later — [download from Microsoft](https://dotnet.microsoft.com/download).
+.NET 10 SDK — [download from Microsoft](https://dotnet.microsoft.com/download).
 
 ## Run
 
